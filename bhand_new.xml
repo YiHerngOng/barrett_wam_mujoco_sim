@@ -1,0 +1,58 @@
+<!--Barrett WAM model developed by Human System and Robotics Laboratory-->
+
+<mujoco model="bhand_new">
+	<compiler inertiafromgeom="true" coordinate="local" angle="radian" meshdir="meshes/"/>
+	<default>
+		<joint type="hinge" limited="true" pos="0 0 0"/>
+<!-- 		<default class='bhand'>
+			<geom type="mesh" contype="0" contype="0" conaffinity="0" group="1" rgba="0.7 0.7 0.7 0.7"/>
+		</default> -->
+<!-- 		<default class='collision'>
+			<geom type="mesh" contype="0" contype="0" conaffinity="0" group="1" rgba="0.5 0.5 0.5 1"/>
+		</default>	 -->	
+	</default>
+	<asset>
+		<mesh name="bhand_palm" file="bhand_palm_fine.stl"/>
+		<mesh name="finger_1_prox" file="bhand_finger_prox_link_fine.stl"/>
+		<mesh name="finger_1_med" file="bhand_finger_med_link_fine.stl"/>
+		<mesh name="finger_1_dist" file="bhand_finger_dist_link_fine.stl"/>
+		<mesh name="finger_2_prox" file="bhand_finger_prox_link_fine.stl"/>
+		<mesh name="finger_2_med" file="bhand_finger_med_link_fine.stl"/>
+		<mesh name="finger_2_dist" file="bhand_finger_dist_link_fine.stl"/>
+		<mesh name="finger_3_prox" file="bhand_finger_prox_link_fine.stl"/>
+		<mesh name="finger_3_med" file="bhand_finger_med_link_fine.stl"/>
+		<mesh name="finger_3_dist" file="bhand_finger_dist_link_fine.stl"/>				
+	</asset>
+	<worldbody>
+		<light directional='true' pos='0 0 1' dir='0 0 1' diffuse='0.2 0.2 0.2' specular='0 0 0'/>
+		<body name="bhand_palm_1" pos="0 0 0.06" quat="0 0 0 1">
+			<inertial pos="0 0 0" mass="1" diaginertia="0.1 0.1 0.1"/>
+			<geom type="mesh" mesh="bhand_palm" />
+			<body name="finger_1" pos="-0.025 0 0.0415" quat="0.707107 0 0 -0.707107">
+				<geom type="mesh" mesh="finger_1_prox"/>
+				<body name="finger_1_prox" pos="0.05 0 0.0339" quat="0.707107 0.707107 0 0">
+					<geom type="mesh" mesh="finger_1_med"/>
+					<body name="finger_1_dist" pos="0.06994 0.003 0" quat="0.92388 0 0 0.382683">
+						<geom type="mesh" mesh="finger_1_dist"/>						
+					</body>
+				</body>	
+			</body>
+			<body name="finger_2" pos="0.025 0 0.0415" quat="0.707107 0 0 -0.707107">
+				<geom type="mesh" mesh="finger_2_prox"/>
+				<body name="finger_2_prox" pos="0.05 0 0.0339" quat="0.707107 0.707107 0 0">
+					<geom type="mesh" mesh="finger_2_med"/>
+					<body name="finger_2_dist" pos="0.06994 0.003 0" quat="0.92388 0 0 0.382683">
+						<geom type="mesh" mesh="finger_2_dist"/>						
+					</body>
+				</body>	
+			</body>
+
+			<body name="finger_3_prox" pos="0 0.05 0.0754" quat="0.5 0.5 0.5 0.5">
+				<geom type="mesh" mesh="finger_3_med"/>
+				<body name="finger_3_dist" pos="0.06994 0.003 0" quat="0.92388 0 0 0.382683">
+					<geom type="mesh" mesh="finger_3_dist"/>						
+				</body>
+			</body>			
+		</body>
+	</worldbody>
+</mujoco>

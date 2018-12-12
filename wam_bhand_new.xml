@@ -8,7 +8,8 @@
 <mujoco model="wam(mjpro150)">
 	<compiler coordinate="local" angle="radian" meshdir="meshes/"/>
 	<default>
-		
+		<joint type="hinge" limited="true" pos="0 0 0">
+
 	</default>
 
 </mujoco>>

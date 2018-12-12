@@ -1,0 +1,14 @@
+<!--
+	Author : Yi Herng Ong
+	Reference: wam_7dof_wam_bhand.xml by Vikash Kumar
+	Purpose : This file is to render 7 dof wam arm with barretthand that can be used on mjpro150
+	Date : 12/11/2018
+-->
+
+<mujoco model="wam(mjpro150)">
+	<compiler coordinate="local" angle="radian" meshdir="meshes/"/>
+	<default>
+		
+	</default>
+
+</mujoco>>

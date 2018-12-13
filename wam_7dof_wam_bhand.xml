@@ -127,6 +127,23 @@
         </body>
     </worldbody>
     <actuator>
-        <motor >
+        <!--WAM-->
+        <position joint="wam/base_yaw_joint" kp="10" ctrlrange="-2.6 2.6"/>
+        <position joint="wam/shoulder_pitch_joint" kp="10" ctrlrange="-1.985 1.985"/>
+        <position joint="wam/shoulder_yaw_joint" kp="10" ctrlrange="-2.8 2.8"/>
+        <position joint="wam/elbow_pitch_joint" kp="10" ctrlrange="-0.9 3.14159"/>
+        <position joint="wam/wrist_yaw_joint" kp="10" ctrlrange="-4.55 1.25"/>
+        <position joint="wam/wrist_pitch_joint" kp="10" ctrlrange="-1.5707 1.5707"/>
+        <position joint="wam/palm_yaw_joint" kp="10" ctrlrange="-3 3"/>
+
+        <!--Barrett -->
+        <position joint="wam/bhand/finger_1/prox_joint" kp="10" ctrlrange="0 3.14159"/>
+        <position joint="wam/bhand/finger_1/med_joint" kp="10" ctrlrange="0 2.44346"/>
+        <position joint="wam/bhand/finger_1/dist_joint" kp="10" ctrlrange="0 0.837758"/>
+        <position joint="wam/bhand/finger_2/prox_joint" kp="10" ctrlrange="0 3.14159"/>
+        <position joint="wam/bhand/finger_2/med_joint" kp="10" ctrlrange="0 2.44346"/>
+        <position joint="wam/bhand/finger_2/dist_joint" kp="10" ctrlrange="0 0.837758"/>
+        <position joint="wam/bhand/finger_3/med_joint" kp="10" ctrlrange="0 2.44346"/>
+        <position joint="wam/bhand/finger_3/dist_joint" kp="10" ctrlrange="0 0.837758"/>    
     </actuator>
 </mujoco>

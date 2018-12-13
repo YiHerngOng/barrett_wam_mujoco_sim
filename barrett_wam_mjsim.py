@@ -4,7 +4,7 @@ from mujoco_py import load_model_from_path, MjSim, MjViewer
 import math
 import os
 
-MODEL_XML = 'bhand_new.xml'
+MODEL_XML = 'wam_7dof_wam_bhand.xml'
 # MODEL_XML = '/home/yiherngong/barrett/bhand.xml'
 
 # model = MjModel(MODEL_XML)

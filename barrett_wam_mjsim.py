@@ -37,14 +37,7 @@ viewer = MjViewer(sim)
 # state = MjSimState()
 t = 0
 while True:
-    # sim.data.ctrl[0] = math.cos(t / 10.) * 0.01
-    # sim.data.ctrl[1] = math.sin(t / 10.) * 0.01
     t += 1
-    # sim.forward()
     sim.step()
     viewer.render()
     sim.data.ctrl[:] = extract_pos()
-    # if t>1000:
-   	# 	break
-
-    # if t > 100 and os.getenv('TESTING') is not None:
